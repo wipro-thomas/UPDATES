@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+    function validateForm(){
+        var emptyName = document.form["myForm"]["choice"].value;
+        if(x == ""){
+            alert("This cannot be empty");
+            return false;
+        }
+    }
+
+
+</script>
+</head>
+<body>
+
+    <form id="myForm" name="myForm">
+        <label for="pick" >What jacket do you prefer Canada Goose or Moncler?</label>
+        <input id="pick" name="choice" required pattern= "Canada Goose|Moncler">
+        <button>Submit</button>
+    </form>
+
+
+</body>
+</html>
