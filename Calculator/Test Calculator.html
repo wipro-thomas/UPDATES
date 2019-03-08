@@ -13,7 +13,7 @@
             }
 
             .para1{
-                
+                text-decoration: underline;
             }
 
             .para2{
@@ -47,16 +47,29 @@
             <br>
 
             <h3> Cash Payments(In/Out) </h3>
-            <span class= "para1"> What do we mean by this?</span>
+            <span id= "para1"> What do we mean by this?</span>
             
             <p><b>Amount of cash paid in</b></p>
-            <input type="text" class="box1"/>
+            <input type="text" id="paidInBox" placeholder="£" onkeypress="isInputNumber(event)"/>
+            
 
             <p><b>Amount of cash withdrawn</b></p>
-            <input type="text" class="box2"/>
+            <input type="text" id="withdrawBox" placeholder="£"/>
 
+            <script type="text/javascript">
+                
+                function validation(evt){
+                   
+                    var ch = String.fromCharCode(evt.which);
 
+                    if(!(/[0-9]/.test(ch))){
+                        evt.preventDefault();
+                    }
+
+                    }
+                
             
+            </script>
 
         </div>
 
